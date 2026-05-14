@@ -1,11 +1,25 @@
-<script setup></script>
+<script setup>
+import Sidebar from "@/components/Sidebar.vue";
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <div class="flex">
+    <div class="">
+      <sidebar></sidebar>
+    </div>
+
+    <div>
+      <router-view></router-view>
+    </div>
+    <div>
+      <router-view name="test"></router-view>
+    </div>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.flex {
+  display: flex;
+  gap: 4rem;
+}
+</style>
